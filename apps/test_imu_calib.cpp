@@ -5,6 +5,7 @@
 #include "imu_tk/filters.h"
 #include "imu_tk/integration.h"
 #include "imu_tk/visualization.h"
+#include<string>
 
 using namespace std;
 using namespace imu_tk;
@@ -12,23 +13,31 @@ using namespace Eigen;
 
 int main(int argc, char** argv)
 {
-  if( argc < 3 )
-    return -1;
+  //if( argc < 3 )
+  //  return -1;
 
+    string acc_file = "D:\\PojectRespos\\imu_cali\\imu_tk\\bin\\test_data\\xsens_acc.mat";
+    string gyro_file = "D:\\PojectRespos\\imu_cali\\imu_tk\\bin\\test_data\\xsens_gyro.mat";
   vector< TriadData > acc_data, gyro_data;
-  
+  /*
   cout<<"Importing IMU data from the Matlab matrix file : "<< argv[1]<<endl;  
-  importAsciiData( argv[1], acc_data, imu_tk::TIMESTAMP_UNIT_SEC );
+  importAsciiData(argv[1], acc_data, imu_tk::TIMESTAMP_UNIT_SEC);
+  //importAsciiData( argv[1], acc_data, imu_tk::TIMESTAMP_UNIT_SEC );
   cout<<"Importing IMU data from the Matlab matrix file : "<< argv[2]<<endl;  
-  importAsciiData( argv[2], gyro_data, imu_tk::TIMESTAMP_UNIT_SEC  );
+  importAsciiData( argv[2], gyro_data, imu_tk::TIMESTAMP_UNIT_SEC  ); */
   
+  cout << "Importing IMU data from the Matlab matrix file : " << acc_file << endl;
+  importAsciiData(acc_file.c_str(), acc_data, imu_tk::TIMESTAMP_UNIT_SEC);
+  //importAsciiData( argv[1], acc_data, imu_tk::TIMESTAMP_UNIT_SEC );
+  cout << "Importing IMU data from the Matlab matrix file : " << gyro_file << endl;
+  importAsciiData(gyro_file.c_str(), gyro_data, imu_tk::TIMESTAMP_UNIT_SEC);
   
   CalibratedTriad init_acc_calib, init_gyro_calib;
   init_acc_calib.setBias( Vector3d(32768, 32768, 32768) );
   init_gyro_calib.setScale( Vector3d(1.0/6258.0, 1.0/6258.0, 1.0/6258.0) );
   
   MultiPosCalibration mp_calib;
-    
+  
   mp_calib.setInitStaticIntervalDuration(50.0);
   mp_calib.setInitAccCalibration( init_acc_calib );
   mp_calib.setInitGyroCalibration( init_gyro_calib );  

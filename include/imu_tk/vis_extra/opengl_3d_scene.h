@@ -76,8 +76,8 @@ class OpenGL3DScene: public QGLWidget
     void resetScene() 
     {
       //TODO
-      max_x_ = max_y_= -std::numeric_limits< float >::max();
-      min_x_ = min_y_ =std::numeric_limits< float >::min();
+      max_x_ = max_y_= -(std::numeric_limits< float >::max)();
+      min_x_ = min_y_ =(std::numeric_limits< float >::min)();
     };
     
     void updateNow();

@@ -1,0 +1,9 @@
+-ID:/PojectRespos/imu_cali/imu_tk/./include
+-I/usr/include
+-IC:/local/boost_1_79_0
+-ID:/PojectRespos/imu_cali/imu_tk/build
+-DWIN32
+--compiler-flavor=msvc
+-o
+D:/PojectRespos/imu_cali/imu_tk/build/include/imu_tk/vis_extra/moc_opengl_3d_scene.cpp
+D:/PojectRespos/imu_cali/imu_tk/include/imu_tk/vis_extra/opengl_3d_scene.h

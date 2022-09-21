@@ -56,7 +56,8 @@ public:
   
   PlotImpl()
   { 
-    gnuplot_pipe_ = popen("gnuplot", "w");
+      //gnuplot_pipe_ = popen("gnuplot", "w");
+      gnuplot_pipe_ = _popen("gnuplot", "w");
     if( gnuplot_pipe_ == NULL )
       std::cerr<<"WARNING : missing gnuplot application!"<<std::endl;
   };
@@ -64,7 +65,8 @@ public:
   ~PlotImpl()
   { 
     if( gnuplot_pipe_ != NULL )
-      pclose( gnuplot_pipe_ );
+        _pclose(gnuplot_pipe_);
+    //pclose( gnuplot_pipe_ );
   };
   
   bool ready() const { return gnuplot_pipe_ != NULL; };
@@ -300,7 +302,8 @@ void Vis3D::updateAndWait( int delay_ms )
     vis_impl_ptr_->updateNow();
     QApplication::instance()->processEvents();
       
-    usleep(1000);
+    //usleep(1000);
+    Sleep(1);
     
     // TODO Improve here using a timer
     if( delay_ms > 0 && time.elapsed() > delay_ms )

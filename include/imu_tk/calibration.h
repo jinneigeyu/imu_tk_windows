@@ -355,7 +355,7 @@ private:
   CalibratedTriad_<_T> acc_calib_, gyro_calib_;
   std::vector< TriadData_<_T> > calib_acc_samples_, calib_gyro_samples_;
   
-  bool verbose_output_;
+  bool verbose_output_=true;
 };
 
 typedef MultiPosCalibration_<double> MultiPosCalibration;

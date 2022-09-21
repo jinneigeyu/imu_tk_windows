@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\PojectRespos\imu_cali\imu_tk\src\calibration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PojectRespos\imu_cali\imu_tk\src\filters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PojectRespos\imu_cali\imu_tk\src\io_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PojectRespos\imu_cali\imu_tk\src\visualization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PojectRespos\imu_cali\imu_tk\build\include\imu_tk\vis_extra\moc_opengl_3d_scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PojectRespos\imu_cali\imu_tk\src\vis_extra\gl_camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PojectRespos\imu_cali\imu_tk\src\vis_extra\opengl_3d_scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\b64d885dcf6cff3b1895080d0cb6e8de\moc_opengl_3d_scene.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\PojectRespos\imu_cali\imu_tk\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{33E18648-FCC8-3E8F-9C52-B88CB5C560F1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2C1F1E7A-17A3-34B5-B440-538B62D220A0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

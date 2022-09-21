@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C26538AA-B9A3-353E-BD56-F0AEC8006927}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>test_integration</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\PojectRespos\imu_cali\imu_tk\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">test_integration.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">test_integration</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\PojectRespos\imu_cali\imu_tk\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">test_integration.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">test_integration</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\PojectRespos\imu_cali\imu_tk\bin\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">test_integration.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">test_integration</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\PojectRespos\imu_cali\imu_tk\bin\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">test_integration.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">test_integration</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PojectRespos\imu_cali\imu_tk\.\include;\usr\include;C:\local\boost_1_79_0;D:\PojectRespos\imu_cali\imu_tk\build;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\qt5;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\qt5\QtOpenGLExtensions;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Lenovo/vcpkg/installed/x64-windows/include" /external:I "C:/Users/Lenovo/vcpkg/installed/x64-windows/include/eigen3" /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PojectRespos\imu_cali\imu_tk\.\include;\usr\include;C:\local\boost_1_79_0;D:\PojectRespos\imu_cali\imu_tk\build;C:\Users\Lenovo\vcpkg\installed\x64-windows\include;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PojectRespos\imu_cali\imu_tk\.\include;\usr\include;C:\local\boost_1_79_0;D:\PojectRespos\imu_cali\imu_tk\build;C:\Users\Lenovo\vcpkg\installed\x64-windows\include;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\PojectRespos\imu_cali\imu_tk\lib\Debug\imu_tk.lib;C:\Users\Lenovo\vcpkg\installed\x64-windows\debug\lib\ceres-debug.lib;opengl32.lib;glu32.lib;C:\Users\Lenovo\vcpkg\installed\x64-windows\debug\lib\glog.lib;gflags.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Lenovo\vcpkg\installed\x64-windows\lib;D:\PojectRespos\imu_cali\imu_tk\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/PojectRespos/imu_cali/imu_tk/build/Debug/test_integration.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/PojectRespos/imu_cali/imu_tk/bin/Debug/test_integration.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PojectRespos\imu_cali\imu_tk\.\include;\usr\include;C:\local\boost_1_79_0;D:\PojectRespos\imu_cali\imu_tk\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Lenovo/vcpkg/installed/x64-windows/include" /external:I "C:/Users/Lenovo/vcpkg/installed/x64-windows/include/eigen3" /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PojectRespos\imu_cali\imu_tk\.\include;\usr\include;C:\local\boost_1_79_0;D:\PojectRespos\imu_cali\imu_tk\build;C:\Users\Lenovo\vcpkg\installed\x64-windows\include;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PojectRespos\imu_cali\imu_tk\.\include;\usr\include;C:\local\boost_1_79_0;D:\PojectRespos\imu_cali\imu_tk\build;C:\Users\Lenovo\vcpkg\installed\x64-windows\include;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\PojectRespos\imu_cali\imu_tk\lib\Release\imu_tk.lib;C:\Users\Lenovo\vcpkg\installed\x64-windows\lib\ceres.lib;opengl32.lib;glu32.lib;C:\Users\Lenovo\vcpkg\installed\x64-windows\lib\glog.lib;gflags::gflags.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/PojectRespos/imu_cali/imu_tk/build/Release/test_integration.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/PojectRespos/imu_cali/imu_tk/bin/Release/test_integration.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PojectRespos\imu_cali\imu_tk\.\include;\usr\include;C:\local\boost_1_79_0;D:\PojectRespos\imu_cali\imu_tk\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Lenovo/vcpkg/installed/x64-windows/include" /external:I "C:/Users/Lenovo/vcpkg/installed/x64-windows/include/eigen3" /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PojectRespos\imu_cali\imu_tk\.\include;\usr\include;C:\local\boost_1_79_0;D:\PojectRespos\imu_cali\imu_tk\build;C:\Users\Lenovo\vcpkg\installed\x64-windows\include;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PojectRespos\imu_cali\imu_tk\.\include;\usr\include;C:\local\boost_1_79_0;D:\PojectRespos\imu_cali\imu_tk\build;C:\Users\Lenovo\vcpkg\installed\x64-windows\include;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\PojectRespos\imu_cali\imu_tk\lib\MinSizeRel\imu_tk.lib;C:\Users\Lenovo\vcpkg\installed\x64-windows\debug\lib\ceres-debug.lib;opengl32.lib;glu32.lib;C:\Users\Lenovo\vcpkg\installed\x64-windows\debug\lib\glog.lib;gflags::gflags.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/PojectRespos/imu_cali/imu_tk/build/MinSizeRel/test_integration.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/PojectRespos/imu_cali/imu_tk/bin/MinSizeRel/test_integration.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PojectRespos\imu_cali\imu_tk\.\include;\usr\include;C:\local\boost_1_79_0;D:\PojectRespos\imu_cali\imu_tk\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Lenovo/vcpkg/installed/x64-windows/include" /external:I "C:/Users/Lenovo/vcpkg/installed/x64-windows/include/eigen3" /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PojectRespos\imu_cali\imu_tk\.\include;\usr\include;C:\local\boost_1_79_0;D:\PojectRespos\imu_cali\imu_tk\build;C:\Users\Lenovo\vcpkg\installed\x64-windows\include;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PojectRespos\imu_cali\imu_tk\.\include;\usr\include;C:\local\boost_1_79_0;D:\PojectRespos\imu_cali\imu_tk\build;C:\Users\Lenovo\vcpkg\installed\x64-windows\include;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\PojectRespos\imu_cali\imu_tk\lib\RelWithDebInfo\imu_tk.lib;C:\Users\Lenovo\vcpkg\installed\x64-windows\debug\lib\ceres-debug.lib;opengl32.lib;glu32.lib;C:\Users\Lenovo\vcpkg\installed\x64-windows\debug\lib\glog.lib;gflags::gflags.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/PojectRespos/imu_cali/imu_tk/build/RelWithDebInfo/test_integration.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/PojectRespos/imu_cali/imu_tk/bin/RelWithDebInfo/test_integration.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\PojectRespos\imu_cali\imu_tk\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/PojectRespos/imu_cali/imu_tk/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PojectRespos/imu_cali/imu_tk -BD:/PojectRespos/imu_cali/imu_tk/build --check-stamp-file D:/PojectRespos/imu_cali/imu_tk/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresTargets-debug.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresTargets-release.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresTargets.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5Config.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ModuleLocation.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJp2Plugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-config-version.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-config.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-debug.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-release.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-config-version.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-config.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-targets-debug.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-targets-release.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-targets.cmake;D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\3.24.0-rc3\CMakeCCompiler.cmake;D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\3.24.0-rc3\CMakeCXXCompiler.cmake;D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\3.24.0-rc3\CMakeRCCompiler.cmake;D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\3.24.0-rc3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/PojectRespos/imu_cali/imu_tk/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PojectRespos/imu_cali/imu_tk -BD:/PojectRespos/imu_cali/imu_tk/build --check-stamp-file D:/PojectRespos/imu_cali/imu_tk/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresTargets-debug.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresTargets-release.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresTargets.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5Config.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ModuleLocation.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJp2Plugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-config-version.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-config.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-debug.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-release.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-config-version.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-config.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-targets-debug.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-targets-release.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-targets.cmake;D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\3.24.0-rc3\CMakeCCompiler.cmake;D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\3.24.0-rc3\CMakeCXXCompiler.cmake;D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\3.24.0-rc3\CMakeRCCompiler.cmake;D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\3.24.0-rc3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/PojectRespos/imu_cali/imu_tk/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PojectRespos/imu_cali/imu_tk -BD:/PojectRespos/imu_cali/imu_tk/build --check-stamp-file D:/PojectRespos/imu_cali/imu_tk/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresTargets-debug.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresTargets-release.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresTargets.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5Config.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ModuleLocation.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJp2Plugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-config-version.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-config.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-debug.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-release.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-config-version.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-config.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-targets-debug.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-targets-release.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-targets.cmake;D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\3.24.0-rc3\CMakeCCompiler.cmake;D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\3.24.0-rc3\CMakeCXXCompiler.cmake;D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\3.24.0-rc3\CMakeRCCompiler.cmake;D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\3.24.0-rc3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/PojectRespos/imu_cali/imu_tk/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PojectRespos/imu_cali/imu_tk -BD:/PojectRespos/imu_cali/imu_tk/build --check-stamp-file D:/PojectRespos/imu_cali/imu_tk/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresTargets-debug.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresTargets-release.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\ceres\CeresTargets.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5Config.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ModuleLocation.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJp2Plugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-config-version.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-config.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-debug.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-release.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-config-version.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-config.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-targets-debug.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-targets-release.cmake;C:\Users\Lenovo\vcpkg\installed\x64-windows\share\glog\glog-targets.cmake;D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\3.24.0-rc3\CMakeCCompiler.cmake;D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\3.24.0-rc3\CMakeCXXCompiler.cmake;D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\3.24.0-rc3\CMakeRCCompiler.cmake;D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\3.24.0-rc3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\PojectRespos\imu_cali\imu_tk\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\PojectRespos\imu_cali\imu_tk\apps\test_integration.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\PojectRespos\imu_cali\imu_tk\build\ZERO_CHECK.proj">
+      <Project>{8D2F2C5D-0E20-3B95-AE7B-170F5D01426A}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\PojectRespos\imu_cali\imu_tk\build\imu_tk.vcxproj">
+      <Project>{45E68DDC-2E11-3081-A385-EB5A03E34704}</Project>
+      <Name>imu_tk</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

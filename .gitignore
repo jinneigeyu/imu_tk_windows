@@ -4,3 +4,5 @@ build/CMakeFiles/
 build/imu_tk.dir/Debug/
 build/test_imu_calib.dir/
 build/test_integration.dir/
+*.lib
+*.pdb

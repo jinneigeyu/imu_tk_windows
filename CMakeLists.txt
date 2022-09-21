@@ -1,6 +1,6 @@
 project(imu_tk)
 
-cmake_minimum_required (VERSION 2.8) 
+cmake_minimum_required (VERSION 3.0) 
 cmake_policy(SET CMP0015 NEW)
 
 if ("${CMAKE_BUILD_TYPE}" STREQUAL "")
@@ -22,9 +22,9 @@ include_directories(./include
                     ${CERES_INCLUDE_DIRS})
 
 #Vis3D
-find_package(Qt4 COMPONENTS QtCore QtGui QtOpenGL REQUIRED )
+find_package(Qt5 COMPONENTS Core Gui OpenGL REQUIRED )
 find_package(OpenGL REQUIRED)
-find_package(GLUT REQUIRED)
+# find_package(GLUT REQUIRED)
 
 include_directories( ${OPENGL_INCLUDE_DIRS}  
                      ${GLUT_INCLUDE_DIRS}
@@ -36,9 +36,9 @@ set(IMU_TK_VIS_EXTRA_SOURCES
 set(IMU_TK_VIS_EXTRA_HEADERS
     ./include/imu_tk/vis_extra/opengl_3d_scene.h )
     
-qt4_wrap_cpp(IMU_TK_VIS_EXTRA_HEADERS_MOC ${IMU_TK_VIS_EXTRA_HEADERS})
+qt5_wrap_cpp(IMU_TK_VIS_EXTRA_HEADERS_MOC ${IMU_TK_VIS_EXTRA_HEADERS})
 
-include(${QT_USE_FILE})
+# include(${QT_USE_FILE})
 add_definitions(${QT_DEFINITIONS})
 
 aux_source_directory( ./src IMU_TK_CORE_SRC )

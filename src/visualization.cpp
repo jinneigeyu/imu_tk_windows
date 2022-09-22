@@ -183,7 +183,7 @@ template <typename _T>
         interval_idx++;
       }
     }
-    strs<<double(samples[i].timestamp() - base_time)<<" "<<val<<std::endl;
+    strs<</*double(samples[i].timestamp() - base_time)<<" "<<*/val<<std::endl;
   }
   strs<<"EOF"<<std::endl;
   

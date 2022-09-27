@@ -108,13 +108,13 @@ template <typename _T>
    
   _T base_time = samples[0].timestamp();
   for( int i = range.start_idx; i <= range.end_idx; i++)
-    strs<<double(samples[i].timestamp() - base_time)<<" "<<double(samples[i].x())<<std::endl;
+    strs<</*double(samples[i].timestamp() - base_time)<<" "<<*/double(samples[i].x())<<std::endl;
   strs<<"EOF"<<std::endl;
   for( int i = range.start_idx; i <= range.end_idx; i++)
-    strs<<double(samples[i].timestamp() - base_time)<<" "<<double(samples[i].y())<<std::endl;
+    strs<</*double(samples[i].timestamp() - base_time)<<" "<<*/double(samples[i].y())<<std::endl;
   strs<<"EOF"<<std::endl;
   for( int i = range.start_idx; i <= range.end_idx; i++)
-    strs<<double(samples[i].timestamp() - base_time)<<" "<<double(samples[i].z())<<std::endl;
+    strs<</*double(samples[i].timestamp() - base_time)<<" "<<*/double(samples[i].z())<<std::endl;
   strs<<"EOF"<<std::endl;
   plot_impl_ptr_->write( strs.str() );
 }
@@ -162,13 +162,13 @@ template <typename _T>
    
   _T base_time = samples[0].timestamp();
   for( int i = range.start_idx; i <= range.end_idx; i++)
-    strs<</*double(samples[i].timestamp() - base_time)<<" "<<*/double(samples[i].x())<<std::endl;
+    strs<<double(samples[i].timestamp() - base_time)<<" "<<double(samples[i].x())<<std::endl;
   strs<<"EOF"<<std::endl;
   for( int i = range.start_idx; i <= range.end_idx; i++)
-    strs<</*double(samples[i].timestamp() - base_time)<<" "<<*/double(samples[i].y())<<std::endl;
+    strs<<double(samples[i].timestamp() - base_time)<<" "<<double(samples[i].y())<<std::endl;
   strs<<"EOF"<<std::endl;
   for( int i = range.start_idx; i <= range.end_idx; i++)
-    strs<</*double(samples[i].timestamp() - base_time)<<" "<<*/double(samples[i].z())<<std::endl;
+    strs<<double(samples[i].timestamp() - base_time)<<" "<<double(samples[i].z())<<std::endl;
   strs<<"EOF"<<std::endl;
   
   for( int i = range.start_idx; i <= range.end_idx; i++)
@@ -183,7 +183,7 @@ template <typename _T>
         interval_idx++;
       }
     }
-    strs<</*double(samples[i].timestamp() - base_time)<<" "<<*/val<<std::endl;
+    strs<<double(samples[i].timestamp() - base_time)<<" "<<val<<std::endl;
   }
   strs<<"EOF"<<std::endl;
   

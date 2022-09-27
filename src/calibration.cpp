@@ -101,6 +101,12 @@ template <typename _T1> struct MultiPosGyroResidual
 		for (int i = interval_pos01_.start_idx; i <= interval_pos01_.end_idx; i++)
 			calib_gyro_samples.push_back(TriadData_<_T2>(calib_triad.unbiasNormalize(gyro_samples_[i])));
 
+
+		// g_versor_pos0_   初始均值
+		// g_versor_pos1_   旋转后的均值
+		//  R_inverse * g0 - g1
+
+
 		Eigen::Matrix< _T2, 3, 3> rot_mat;
 		integrateGyroInterval(calib_gyro_samples, rot_mat, _T2(dt_));
 

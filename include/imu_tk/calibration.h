@@ -278,6 +278,28 @@ public:
   /** @brief Set the number of data samples to be extracted from each detected static intervals.
    *         Default is 100.  */
   int setIntarvalsNumSamples( int num ) { interval_n_samples_ = num; };
+ 
+  void setintervalVarianceStarEnd(int start, int end)
+  {
+
+      if (end<start)
+      {
+          return;
+      }
+
+      if (start<=0 || end<=0)
+      {
+          return;
+      }
+
+      if ((end -start) > 20)
+      {
+          return;
+      }
+
+      _start = start;
+      _end = end;
+  }
   
   /** @brief Set the accelerometers initial guess calibration parameters */  
   void setInitAccCalibration( CalibratedTriad_<_T> &init_calib ){ init_acc_calib_ = init_calib; };
@@ -356,6 +378,9 @@ private:
   std::vector< TriadData_<_T> > calib_acc_samples_, calib_gyro_samples_;
   
   bool verbose_output_=true;
+
+  int _start = 2;
+  int _end = 10;
 };
 
 typedef MultiPosCalibration_<double> MultiPosCalibration;
@@ -419,7 +444,8 @@ template <typename _T>
   std::ofstream file( filename.data() );
   if (file.is_open())
   {
-    file<<mis_mat_<<std::endl<<std::endl
+    file<< std::endl 
+        <<mis_mat_<<std::endl<<std::endl
         <<scale_mat_<<std::endl<<std::endl
         <<bias_vec_<<std::endl<<std::endl;
     

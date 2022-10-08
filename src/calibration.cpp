@@ -173,7 +173,7 @@ bool MultiPosCalibration_<_T>::calibrateAcc(const std::vector< TriadData_<_T> >&
 	int min_cost_th = -1;
 	std::vector< double > min_cost_calib_params;
 
-	for (int th_mult = 2; th_mult <= 10; th_mult++)
+	for (int th_mult = _start; th_mult <= _end; th_mult++)
 	{
 		std::vector< imu_tk::DataInterval > static_intervals;
 		std::vector< imu_tk::TriadData_<_T> > static_samples;
@@ -259,11 +259,11 @@ bool MultiPosCalibration_<_T>::calibrateAcc(const std::vector< TriadData_<_T> >&
 	for (int i = 0; i < n_samps; i++)
 		calib_acc_samples_.push_back(acc_calib_.unbiasNormalize(acc_samples[i]));
 
-	verbose_output_ = true;
+	//verbose_output_ = true;
 	if (verbose_output_)
 	{
-		Plot plot;
-		plot.plotIntervals(calib_acc_samples_, min_cost_static_intervals_);
+		//Plot plot;
+		//plot.plotIntervals(calib_acc_samples_, min_cost_static_intervals_);
 
 		cout << "Accelerometers calibration: Better calibration obtained using threshold multiplier " << min_cost_th
 			<< " with residual " << min_cost << endl
@@ -273,7 +273,7 @@ bool MultiPosCalibration_<_T>::calibrateAcc(const std::vector< TriadData_<_T> >&
 			<< 1.0 / acc_calib_.scaleY() << endl
 			<< 1.0 / acc_calib_.scaleZ() << endl;
 
-		waitForKey();
+		//waitForKey();
 	}
 
 	return true;

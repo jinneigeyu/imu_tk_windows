@@ -6,3 +6,4 @@ build/test_imu_calib.dir/
 build/test_integration.dir/
 *.lib
 *.pdb
+build/x64/Debug/

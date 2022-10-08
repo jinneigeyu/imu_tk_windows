@@ -1,0 +1,19 @@
+{
+  "accResultFilePath": "acc_cali.txt",
+  "baise": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "gravityMagnitude": 9.81744,
+  "gyroResultFilePath": "gyro_cali.txt",
+  "initTimeDurationSeconds": 12.0,
+  "inputImuFile": "",
+  "intervalVarianceEnd": 2.0,
+  "intervalVarianceStart": 2.0,
+  "scale": [
+    1.0,
+    1.0,
+    1.0
+  ]
+}

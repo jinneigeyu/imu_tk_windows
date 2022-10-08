@@ -118,7 +118,7 @@
     </Midl>
     <Link>
       <AdditionalDependencies>D:\PojectRespos\imu_cali\imu_tk\lib\Debug\imu_tk.lib;imu_tk.lib;C:\Users\Lenovo\vcpkg\installed\x64-windows\debug\lib\ceres-debug.lib;opengl32.lib;glu32.lib;C:\Users\Lenovo\vcpkg\installed\x64-windows\debug\lib\glog.lib;gflags.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\Lenovo\vcpkg\installed\x64-windows\lib;D:\PojectRespos\imu_cali\imu_tk\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Lenovo\vcpkg\installed\x64-windows\lib;D:\PojectRespos\imu_cali\imu_tk\lib\Debug;C:\local\boost_1_79_0\lib64-msvc-14.2;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
@@ -335,6 +335,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{45E68DDC-2E11-3081-A385-EB5A03E34704}</Project>
       <Name>imu_tk</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cmdparser.hpp" />
+    <ClInclude Include="Param.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

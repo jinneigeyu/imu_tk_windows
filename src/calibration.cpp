@@ -262,8 +262,14 @@ bool MultiPosCalibration_<_T>::calibrateAcc(const std::vector< TriadData_<_T> >&
 	//verbose_output_ = true;
 	if (verbose_output_)
 	{
-		//Plot plot;
-		//plot.plotIntervals(calib_acc_samples_, min_cost_static_intervals_);
+		if (show_plot_)
+		{
+			Plot plot;
+			plot.plotIntervals(calib_acc_samples_, min_cost_static_intervals_);
+			
+			waitForKey();
+		}
+	
 
 		cout << "Accelerometers calibration: Better calibration obtained using threshold multiplier " << min_cost_th
 			<< " with residual " << min_cost << endl

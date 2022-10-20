@@ -363,6 +363,10 @@ public:
    *         calibrateAccGyro() ) */
   const std::vector< TriadData_<_T> >& getCalibGyroSamples() const { return calib_gyro_samples_; };
   
+  void setShowPlot(const bool& show) 
+  {
+      show_plot_ = show;
+  }
 private:
   
   _T g_mag_;
@@ -378,7 +382,7 @@ private:
   std::vector< TriadData_<_T> > calib_acc_samples_, calib_gyro_samples_;
   
   bool verbose_output_=true;
-
+  bool show_plot_ = false;
   int _start = 2;
   int _end = 10;
 };

@@ -43,7 +43,7 @@ void sean()
 }
 
 
-string cfg_default = "D:/PojectRespos/python_socket/folder/test_folder/server_root/2022-09-30_13-35-26.418_127.0.0.1_58794/config.json";
+string cfg_default = "D:/PojectRespos/imu_tk_app/bin/Debug/ClientRecv/00/config.json";
 
 void configure_parser(cli::Parser& parser)
 {
@@ -52,7 +52,8 @@ void configure_parser(cli::Parser& parser)
 	std::string description = "a json file path ,that for AlgParam ";
 
 
-	parser.set_required<std::string>("cfg", "config", description);
+	//parser.set_required<std::string>("cfg", "config", description);
+	parser.set_optional<std::string>("cfg", "config", cfg_default, description);
 	//parser.set_optional<std::string>("m", "mode ", "tick", "mode in ['async','tick,'fly']");
 	//parser.set_optional<double>("v", "velocity ", 0.1, "robot move speed : default is 0.1 m/s");
 	//parser.set_optional<double>("a", "acc ", 0.1, "robot move acceloration : default is 0.1 m/s^2");
@@ -93,6 +94,7 @@ bool  RunAlg( const AlgParam& param , const boost::filesystem::path cfgfolder)
 	init_gyro_calib.setScale(Vector3d(param.scale[0], param.scale[1], param.scale[2]));
 	MultiPosCalibration mp_calib;
 
+	mp_calib.setShowPlot(param.showplot);
 	mp_calib.setInitStaticIntervalDuration(param.initTimeDurationSeconds);
 	mp_calib.setintervalVarianceStarEnd(param.intervalVarianceStart, param.intervalVarianceEnd);
 	mp_calib.setInitAccCalibration(init_acc_calib);
@@ -130,9 +132,9 @@ int main(int argc, char** argv)
 			throw  std::exception(description.c_str());
 		}
 
-
 		AlgParam param;
 		resolveParam(jsf, param);
+		//param.showplot = true;
 		boost::filesystem::path parent_dir = boost::filesystem::path(jsf).parent_path();
 		RunAlg(param, parent_dir);
 	}
@@ -144,34 +146,35 @@ int main(int argc, char** argv)
 	
 	return 1;
 
-	string imu_file = "D:/PojectRespos/imu_cali/imu_tk/bin/test_data/data/10_kim/imu.txt";
+	//string imu_file = "D:/PojectRespos/imu_cali/imu_tk/bin/test_data/data/10_kim/imu.txt";
 
-	vector< TriadData > acc_data, gyro_data;
-	//vector< TriadData > acc_datacp, gyro_datacp;
-	importAsciiData(imu_file.c_str(), acc_data, gyro_data, imu_tk::TIMESTAMP_UNIT_MSEC, imu_tk::DATASET_SPACE_SEPARATED);
-	//Plot plot;
-	//plot.plotSamples(acc_data);
-	CalibratedTriad init_acc_calib, init_gyro_calib;
+	//vector< TriadData > acc_data, gyro_data;
+	////vector< TriadData > acc_datacp, gyro_datacp;
+	//importAsciiData(imu_file.c_str(), acc_data, gyro_data, imu_tk::TIMESTAMP_UNIT_MSEC, imu_tk::DATASET_SPACE_SEPARATED);
+	////Plot plot;
+	////plot.plotSamples(acc_data);
+	//CalibratedTriad init_acc_calib, init_gyro_calib;
 
-	//init_acc_calib.setBias( Vector3d(32768, 32768, 32768) );
-	//init_gyro_calib.setScale( Vector3d(1.0/6258.0, 1.0/6258.0, 1.0/6258.0) );
+	////init_acc_calib.setBias( Vector3d(32768, 32768, 32768) );
+	////init_gyro_calib.setScale( Vector3d(1.0/6258.0, 1.0/6258.0, 1.0/6258.0) );
 
-	init_acc_calib.setBias(Vector3d(0, 0, 0));
-	init_gyro_calib.setScale(Vector3d(1, 1, 1));
+	//init_acc_calib.setBias(Vector3d(0, 0, 0));
+	//init_gyro_calib.setScale(Vector3d(1, 1, 1));
 
 
-	MultiPosCalibration mp_calib;
+	//MultiPosCalibration mp_calib;
 
-	mp_calib.setInitStaticIntervalDuration((double)12);
-	mp_calib.setInitAccCalibration(init_acc_calib);
-	mp_calib.setInitGyroCalibration(init_gyro_calib);
-	mp_calib.setGravityMagnitude(9.81744);
-	mp_calib.enableVerboseOutput(true);
-	mp_calib.enableAccUseMeans(false);
-	//mp_calib.setGyroDataPeriod(0.01);
-	mp_calib.calibrateAccGyro(acc_data, gyro_data);
-	mp_calib.getAccCalib().save("test_imu_acc.calib");
-	mp_calib.getGyroCalib().save("test_imu_gyro.calib");
+	//mp_calib.setInitStaticIntervalDuration((double)12);
+	//mp_calib.setInitAccCalibration(init_acc_calib);
+	//mp_calib.setInitGyroCalibration(init_gyro_calib);
+	//mp_calib.setGravityMagnitude(9.81744);
+	//mp_calib.enableVerboseOutput(true);
+	//mp_calib.enableAccUseMeans(false);
+	////mp_calib.setGyroDataPeriod(0.01);
+	//mp_calib.calibrateAccGyro(acc_data, gyro_data);
+
+	//mp_calib.getAccCalib().save("test_imu_acc.calib");
+	//mp_calib.getGyroCalib().save("test_imu_gyro.calib");
 
 
 	return 0;

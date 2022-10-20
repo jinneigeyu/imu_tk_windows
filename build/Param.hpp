@@ -19,6 +19,7 @@ struct AlgParam
 
 	double intervalVarianceStart = 2;
 	double intervalVarianceEnd = 2;
+	bool showplot = false;
 	
 	// use json to print
 	//friend ostream& operator<<(ostream& stream, const AlgParam& p)

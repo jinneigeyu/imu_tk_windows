@@ -112,7 +112,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\PojectRespos\imu_cali\imu_tk\.\include;\usr\include;C:\local\boost_1_79_0;D:\PojectRespos\imu_cali\imu_tk\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\PojectRespos\imu_cali\imu_tk\.\include;\usr\include;C:\local\boost_1_79_0;D:\PojectRespos\imu_cali\imu_tk\build;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\qt5;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\qt5\QtOpenGLExtensions;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\Users\Lenovo\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -122,10 +122,12 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";GLOG_NO_ABBREVIATED_SEVERITIES</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
+      <ConformanceMode>false</ConformanceMode>
+      <DisableSpecificWarnings>4716;2765</DisableSpecificWarnings>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>

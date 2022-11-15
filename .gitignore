@@ -7,3 +7,4 @@ build/test_integration.dir/
 *.lib
 *.pdb
 build/x64/Debug/
+build/imu_tk.dir/Release/

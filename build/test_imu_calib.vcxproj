@@ -132,7 +132,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\PojectRespos\imu_cali\imu_tk\.\include;\usr\include;C:\local\boost_1_79_0;D:\PojectRespos\imu_cali\imu_tk\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\local\boost_1_79_0;D:\PojectRespos\imu_cali\imu_tk\.\include;\usr\include;D:\PojectRespos\imu_cali\imu_tk\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Lenovo/vcpkg/installed/x64-windows/include" /external:I "C:/Users/Lenovo/vcpkg/installed/x64-windows/include/eigen3" /Zc:__cplusplus</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -148,6 +148,7 @@
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
+      <DisableSpecificWarnings>4716</DisableSpecificWarnings>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
@@ -162,8 +163,8 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>D:\PojectRespos\imu_cali\imu_tk\lib\Release\imu_tk.lib;C:\Users\Lenovo\vcpkg\installed\x64-windows\lib\ceres.lib;opengl32.lib;glu32.lib;C:\Users\Lenovo\vcpkg\installed\x64-windows\lib\glog.lib;gflags::gflags.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>D:\PojectRespos\imu_cali\imu_tk\lib\Release\imu_tk.lib;C:\Users\Lenovo\vcpkg\installed\x64-windows\lib\ceres.lib;opengl32.lib;glu32.lib;C:\Users\Lenovo\vcpkg\installed\x64-windows\lib\glog.lib;gflags.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Lenovo\vcpkg\installed\x64-windows\lib;D:\PojectRespos\imu_cali\imu_tk\lib\Debug;C:\local\boost_1_79_0\lib64-msvc-14.2;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>

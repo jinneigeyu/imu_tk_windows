@@ -43,13 +43,13 @@ void sean()
 }
 
 
-string cfg_default = "D:/PojectRespos/imu_tk_app/bin/Debug/ClientRecv/00/config.json";
+string cfg_default = "D:\\PojectRespos\\imu_tk_app\\bin\\Release\\ClientTempRecv\\temp_file_16708235262568455\\config.json";
 
 void configure_parser(cli::Parser& parser)
 {
 	AlgParam temp;
 	json tj = temp;
-	std::string description = "a json file path ,that for AlgParam ";
+	std::string description = "a json file path ,that for Algorithm input params";
 
 
 	//parser.set_required<std::string>("cfg", "config", description);

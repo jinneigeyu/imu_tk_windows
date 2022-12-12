@@ -34,12 +34,14 @@ void to_json(nlohmann::json& j, const AlgParam& p)
 		{"inputImuFile"					, p.inputImuFile					},
 		{"baise"						, p.baise							},
 		{"scale"						, p.scale							},
+		{"startTimeSecondsOffset"		, p.startTimeSecondsOffset			},
 		{"initTimeDurationSeconds"		, p.initTimeDurationSeconds			},
 		{"gravityMagnitude"				, p.gravityMagnitude				},
 		{"accResultFilePath"			, p.accResultFilePath				},
 		{"gyroResultFilePath"			, p.gyroResultFilePath				},
 		{"intervalVarianceStart"		, p.intervalVarianceStart			},
 		{"intervalVarianceEnd"			, p.intervalVarianceEnd				},
+		{"showplot"			, p.showplot				},
 	};
 }
 
@@ -49,10 +51,12 @@ void from_json(const nlohmann::json& j, AlgParam& p)
 	j.at("inputImuFile").get_to(p.inputImuFile);
 	j.at("baise").get_to(p.baise);
 	j.at("scale").get_to(p.scale);
+	j.at("startTimeSecondsOffset").get_to(p.startTimeSecondsOffset);
 	j.at("initTimeDurationSeconds").get_to(p.initTimeDurationSeconds);
 	j.at("gravityMagnitude").get_to(p.gravityMagnitude);
 	j.at("accResultFilePath").get_to(p.accResultFilePath);
 	j.at("gyroResultFilePath").get_to(p.gyroResultFilePath);
 	j.at("intervalVarianceStart").get_to(p.intervalVarianceStart);
 	j.at("intervalVarianceEnd").get_to(p.intervalVarianceEnd);
+	j.at("showplot").get_to(p.showplot);
 }

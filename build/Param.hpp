@@ -2,6 +2,7 @@
 #include <string>
 #include <nlohmann/json.hpp>
 #include <iostream>
+#include "imu_tk/io_utils.h"
 
 struct AlgParam
 {
@@ -21,6 +22,7 @@ struct AlgParam
 	double intervalVarianceEnd = 2;
 	bool showplot = false;
 	
+	std::string  timeStampUnit = "m_second";
 	// use json to print
 	//friend ostream& operator<<(ostream& stream, const AlgParam& p)
 	//{
@@ -34,6 +36,7 @@ void to_json(nlohmann::json& j, const AlgParam& p)
 		{"inputImuFile"					, p.inputImuFile					},
 		{"baise"						, p.baise							},
 		{"scale"						, p.scale							},
+		{"timeStampUnit"				, p.timeStampUnit					},
 		{"startTimeSecondsOffset"		, p.startTimeSecondsOffset			},
 		{"initTimeDurationSeconds"		, p.initTimeDurationSeconds			},
 		{"gravityMagnitude"				, p.gravityMagnitude				},
@@ -51,6 +54,7 @@ void from_json(const nlohmann::json& j, AlgParam& p)
 	j.at("inputImuFile").get_to(p.inputImuFile);
 	j.at("baise").get_to(p.baise);
 	j.at("scale").get_to(p.scale);
+	j.at("timeStampUnit").get_to(p.timeStampUnit);
 	j.at("startTimeSecondsOffset").get_to(p.startTimeSecondsOffset);
 	j.at("initTimeDurationSeconds").get_to(p.initTimeDurationSeconds);
 	j.at("gravityMagnitude").get_to(p.gravityMagnitude);

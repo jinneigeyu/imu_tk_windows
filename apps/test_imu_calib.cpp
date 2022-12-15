@@ -43,7 +43,7 @@ void sean()
 }
 
 
-string cfg_default = "D:\\PojectRespos\\imu_tk_app\\bin\\Release\\ClientTempRecv\\temp_file_16708235262568455\\config.json";
+string cfg_default = "C:\\Users\\Lenovo\\Desktop\\imu_work_space\\config.json";
 
 void configure_parser(cli::Parser& parser)
 {
@@ -62,7 +62,7 @@ void configure_parser(cli::Parser& parser)
 
 }
 
-void resolveParam(string jsonFile,AlgParam& param)
+void resolveParam(string jsonFile, AlgParam& param)
 {
 	// json help https://json.nlohmann.me/api/basic_json/find/#notes
 	// https://github.com/nlohmann/json#json-as-first-class-data-type
@@ -70,27 +70,69 @@ void resolveParam(string jsonFile,AlgParam& param)
 	std::ifstream f(jsonFile);
 	if (f.good())
 	{
-		std::cout <<"read config at: " << jsonFile << std::endl;
+		std::cout << "read config at: " << jsonFile << std::endl;
 	}
 	json js = json::parse(f);
-	param = js.get<AlgParam>();		
+	param = js.get<AlgParam>();
 	std::cout << "param info" << std::endl;
 	std::cout << js << std::endl;
 }
 
-bool  RunAlg( const AlgParam& param , const boost::filesystem::path cfgfolder)
+bool getTimeStampUnit(std::string type, imu_tk::TimestampUnit& unit)
+{
+	if (type == "second")
+	{
+		unit = imu_tk::TimestampUnit::TIMESTAMP_UNIT_SEC;
+	}
+	else if (type == "m_second")
+	{
+		unit = imu_tk::TimestampUnit::TIMESTAMP_UNIT_MSEC;
+
+	}
+	else if (type == "u_second")
+	{
+		unit = imu_tk::TimestampUnit::TIMESTAMP_UNIT_USEC;
+
+	}
+	else if (type == "n_second")
+	{
+		unit = imu_tk::TimestampUnit::TIMESTAMP_UNIT_NSEC;
+
+	}
+	else
+	{
+		return false;
+	}
+	return true;
+}
+
+bool  RunAlg(const AlgParam& param, const boost::filesystem::path cfgfolder)
 {
 	// json input imu path is relative
 	// convert to real imu file path
-	string imu_file = (cfgfolder/ param.inputImuFile).string();
+	string imu_file = (cfgfolder / param.inputImuFile).string();
 
 	vector< TriadData > acc_data, gyro_data;
 
-	importAsciiDataTimeOffset(imu_file.c_str(), acc_data, gyro_data, imu_tk::TIMESTAMP_UNIT_MSEC, imu_tk::DATASET_SPACE_SEPARATED,param.startTimeSecondsOffset);
+	//importAsciiDataTimeOffset(imu_file.c_str(), acc_data, gyro_data, 
+	//	imu_tk::TIMESTAMP_UNIT_MSEC, 
+	//	imu_tk::DATASET_SPACE_SEPARATED,param.startTimeSecondsOffset);
+	imu_tk::TimestampUnit timeStampUnit;
+	bool ret = getTimeStampUnit(param.timeStampUnit, timeStampUnit);
+	if (!ret)
+	{
+		std::cout << "Param timeStampUnit Fomat Error. [ second , m_second, u_second, n_second]" << std::endl;
+		return false;
+	}
+
+	importAsciiDataTimeOffset(imu_file.c_str(), acc_data, gyro_data,
+		timeStampUnit,
+		imu_tk::DATASET_SPACE_SEPARATED,
+		param.startTimeSecondsOffset);
 
 	CalibratedTriad init_acc_calib, init_gyro_calib;
 
-	init_acc_calib.setBias( Vector3d(param.baise[0], param.baise[1], param.baise[2]));
+	init_acc_calib.setBias(Vector3d(param.baise[0], param.baise[1], param.baise[2]));
 	init_gyro_calib.setScale(Vector3d(param.scale[0], param.scale[1], param.scale[2]));
 	MultiPosCalibration mp_calib;
 
@@ -108,6 +150,8 @@ bool  RunAlg( const AlgParam& param , const boost::filesystem::path cfgfolder)
 
 	accrcali_result.save((cfgfolder / param.accResultFilePath).string());
 	gyrocali_result.save((cfgfolder / param.gyroResultFilePath).string());
+
+	return true;
 }
 
 
@@ -143,7 +187,7 @@ int main(int argc, char** argv)
 		std::cout << ex.what() << std::endl;
 		return 0;
 	}
-	
+
 	return 1;
 
 	//string imu_file = "D:/PojectRespos/imu_cali/imu_tk/bin/test_data/data/10_kim/imu.txt";

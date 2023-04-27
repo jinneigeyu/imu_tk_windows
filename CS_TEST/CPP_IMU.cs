@@ -27,8 +27,8 @@ namespace CS_TEST
 
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 3)]
         public double[] init_scale = new double[3] { 1, 1, 1 }; // 初始acc偏差 设为默认 [1,1,1]
-        public double startOffsetSeconds = 3.75;// imu数据前  startOffsetSeconds 秒内的数据为丢去  单位 ：秒
-        public double staticIntervalDuration = 11.75;  // 切除丢弃数据后的静止时间 单位 ：秒
+        public double startOffsetSeconds = 0;// imu数据前  startOffsetSeconds 秒内的数据为丢去  单位 ：秒
+        public double staticIntervalDuration = 5;  // 切除丢弃数据后的静止时间 单位 ：秒
         public bool show_plot = false; // 默认为false 不要开启
         public double gravityMagnitude = 9.81744;  // 当地重力加速度的值，精确值需要客户查表 然后写入
     }

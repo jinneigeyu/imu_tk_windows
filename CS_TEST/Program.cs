@@ -10,13 +10,13 @@ namespace CS_TEST
     {
         static void Main(string[] args)
         {
-            string imu_txt = "D:/WechatFiles/WeChat Files/youxiangnidelian/FileStorage/File/2023-04/lo(1).txt";
-
+            
+            string  imu_txt = "D:\\PojectRespos\\imu_cali_windows\\data\\2023_04_27\\output\\ref_imu_data.txt";
             CaliParam caliParam = new CaliParam()
             {
-                timeStyle = TimeStyle.UNIT_NS,
-                startOffsetSeconds = 0,
-                staticIntervalDuration = 5,
+                timeStyle = TimeStyle.UNIT_US,
+                staticIntervalDuration = 5.0,
+                gravityMagnitude = 9.7833
             };
 
             CaliResult caliResult = new CaliResult()

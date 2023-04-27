@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32802.440
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cali_imu", "cali_imu\cali_imu.vcxproj", "{60B539C6-F1B5-4995-BA05-02B7B57C659F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "imu_cali_lib", "cali_imu\cali_imu.vcxproj", "{60B539C6-F1B5-4995-BA05-02B7B57C659F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_TEST", "CS_TEST\CS_TEST.csproj", "{C0972B1A-A063-4E2E-B6EA-F4A755498DFF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8B0A23A9-9AAA-43C8-A51A-BBD188E159E1} = {8B0A23A9-9AAA-43C8-A51A-BBD188E159E1}
+		{60B539C6-F1B5-4995-BA05-02B7B57C659F} = {60B539C6-F1B5-4995-BA05-02B7B57C659F}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "imu_cali_dll", "imu_cali_dll\imu_cali_dll.vcxproj", "{8B0A23A9-9AAA-43C8-A51A-BBD188E159E1}"
 EndProject

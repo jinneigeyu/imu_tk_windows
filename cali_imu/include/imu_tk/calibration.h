@@ -292,10 +292,10 @@ public:
           return;
       }
 
-      if ((end -start) > 20)
-      {
-          return;
-      }
+      //if ((end -start) > 20)
+      //{
+      //    return;
+      //}
 
       _start = start;
       _end = end;

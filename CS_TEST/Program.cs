@@ -20,9 +20,10 @@ namespace CS_TEST
 
             //RunImuServic(@"D:\PojectRespos\imu_cali_windows\data\data_20230621_imu_all\ref_imu\20230621\140927ref_imudata.txt");
 
-            RumTONLYDir(@"D:\PojectRespos\imu_cali_windows\data\data_20230630_robot\right");
+            //RumTONLYDir(@"D:\PojectRespos\imu_cali_windows\data\data_20230621_imu_all\GT23140002020_left\OnLine\20230621");
 
-            //RunImuTonly(@"D:\PojectRespos\imu_cali_windows\data\data_20230629_robot\_imudata0.txt");
+
+            RunImuTonly(@"D:\PojectRespos\imu_cali_windows\data\data_20230621_imu_all\GT23140002020_right\OnLine\20230621\140927right_imudata.txt");
             Console.ReadKey();
         }
 

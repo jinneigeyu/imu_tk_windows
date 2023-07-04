@@ -42,7 +42,7 @@ int cali_imu(const char* imuFile, CaliParam caliParam, CaliResult& caliResult)
 	MultiPosCalibration mp_calib;
 	mp_calib.setShowPlot(caliParam.show_plot);
 	mp_calib.setInitStaticIntervalDuration(caliParam.staticIntervalDuration);
-	mp_calib.setintervalVarianceStarEnd(2, 8);
+	mp_calib.setintervalVarianceStarEnd(35, 36);
 	mp_calib.setInitAccCalibration(init_acc_calib);
 	mp_calib.setInitGyroCalibration(init_gyro_calib);
 	mp_calib.setGravityMagnitude(caliParam.gravityMagnitude);

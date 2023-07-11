@@ -14,7 +14,8 @@ namespace CS_TEST
         static void Main(string[] args)
         {
 
-            //RunImu720_Dir(@"D:\PojectRespos\imu_cali_windows\data\data_20230616_2_new_pos");
+            RunImu720(@"D:\PojectRespos\imu_cali_windows\data\data_20230705\IMU_RAW\ref_imudata.txt");
+            Console.ReadKey();
             //RunImu720(@"D:\PojectRespos\imu_cali_windows\data\data_20230616_2_new_pos\ref_imudata_143544.txt");
             //RunImu720(@"D:\PojectRespos\imu_cali_windows\data\data_20230621_imu_all\ref_imu\20230621\140927ref_imudata.txt");
 
@@ -23,8 +24,25 @@ namespace CS_TEST
             //RumTONLYDir(@"D:\PojectRespos\imu_cali_windows\data\data_20230621_imu_all\GT23140002020_left\OnLine\20230621");
 
 
-            RunImuTonly(@"D:\PojectRespos\imu_cali_windows\data\data_20230621_imu_all\GT23140002020_right\OnLine\20230621\140927right_imudata.txt");
-            Console.ReadKey();
+            //RunImuTonly(@"D:\PojectRespos\imu_cali_windows\data\data_20230621_imu_all\GT23140002020_right\OnLine\20230621\140927right_imudata.txt");
+
+            //Console.WriteLine("input need cali dir or path");
+            //string path = Console.ReadLine();
+            //if (File.Exists(path))
+            //{
+            //    Console.WriteLine($"{path} is a file");
+            //    RumTONLYDir(path);
+            //}
+            //else if (Directory.Exists(path))
+            //{
+            //    Console.WriteLine($"{path} is a folder");
+            //    RumTONLYDir(path);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("path not exits");
+            //}
+
         }
 
 
@@ -66,16 +84,18 @@ namespace CS_TEST
                 gyro_result = new ReusltStruct()
             };
 
-            CPP_IMU.cali_imu(imu_txt, caliParam, ref caliResult);
+            int ok = CPP_IMU.cali_imu(imu_txt, caliParam, ref caliResult);
 
 
-            string dir = Path.GetDirectoryName(imu_txt);
-            string name = Path.GetFileNameWithoutExtension(imu_txt);
+            if (ok == 0)
+            {
+                string dir = Path.GetDirectoryName(imu_txt);
+                string name = Path.GetFileNameWithoutExtension(imu_txt);
+                string result = JsonConvert.SerializeObject(caliResult);
+                SaveMyJson(Path.Combine(dir, name + "_cali_result.json"), result);
+            }
 
-            string result = JsonConvert.SerializeObject(caliResult);
-
-
-            SaveMyJson(Path.Combine(dir, name + "_cali_result.json"), result);
+            
         }
 
 
@@ -130,16 +150,17 @@ namespace CS_TEST
                 gyro_result = new ReusltStruct()
             };
 
-            CPP_IMU.cali_imu(imu_txt, caliParam, ref caliResult);
+            int ok = CPP_IMU.cali_imu(imu_txt, caliParam, ref caliResult);
 
+            if (ok==0)
+            {
+                string dir = Path.GetDirectoryName(imu_txt);
+                string name = Path.GetFileNameWithoutExtension(imu_txt);
+                string result = JsonConvert.SerializeObject(caliResult);
+                SaveMyJson(Path.Combine(dir, name + "_cali_result.json"), result);
+            }
 
-            string dir = Path.GetDirectoryName(imu_txt);
-            string name = Path.GetFileNameWithoutExtension(imu_txt);
-
-            string result = JsonConvert.SerializeObject(caliResult);
-
-
-            SaveMyJson(Path.Combine(dir, name + "_cali_result.json"), result);
+            
         }
     }
 }

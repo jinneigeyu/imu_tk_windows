@@ -162,7 +162,8 @@ public:
    */
   inline Eigen::Matrix< _T, 3 , 1> unbiasNormalize( const Eigen::Matrix< _T, 3 , 1> &raw_data ) const
   {
-    return ms_mat_*(raw_data - bias_vec_); 
+      return ms_mat_ * (raw_data - bias_vec_); // rectify format: cali = mis_mat * scale*(raw_data - baise_vec)
+      //return ms_mat_*(raw_data + bias_vec_);     // rectify format: cali = mis_mat * scale*(raw_data + baise_vec)
   };
   
   /** @brief Normalize a raw data X by removing the biases and 

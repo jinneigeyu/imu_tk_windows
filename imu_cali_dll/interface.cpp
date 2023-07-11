@@ -48,13 +48,14 @@ int cali_imu(const char* imuFile, CaliParam caliParam, CaliResult& caliResult)
 	mp_calib.setGravityMagnitude(caliParam.gravityMagnitude);
 	mp_calib.enableVerboseOutput(true);
 	mp_calib.enableAccUseMeans(false);
-	mp_calib.calibrateAccGyro(acc_data, gyro_data);
+	bool ok = mp_calib.calibrateAccGyro(acc_data, gyro_data);
 
 	auto accrcali_result = mp_calib.getAccCalib();
 	auto gyrocali_result = mp_calib.getGyroCalib();
-
 	convertResult(accrcali_result, gyrocali_result, caliResult);
 
+	if (!ok)
+		return -1;
 
 	return 0;
 }
